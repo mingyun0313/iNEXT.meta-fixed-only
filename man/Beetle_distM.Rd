@@ -5,7 +5,7 @@
   Species pairwise distance matrix for beetle species
 }
 \description{
-  This dataset includes a beetle species pairwise symmetric distance matrix for 199 species listed in the \code{Beetle_abundance_data} dataset. Each element in the matrix represents a Gower distance between two species computed from species traits. \cr
+  This dataset includes a beetle species pairwise symmetric distance matrix for 1308 species listed in the \code{Beetle_abundance_data} dataset. Each element in the matrix represents a Gower distance between two species computed from species traits. \cr
 }
 \usage{data("Beetle_distM")}
 \format{
