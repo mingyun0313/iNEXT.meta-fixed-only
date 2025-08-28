@@ -1009,7 +1009,7 @@ output1 <- iNEXTbeta3Dmeta(data = Beetle_abundance_data, diversity = "TD",
 ggiNEXTmeta(output1, q = 0, num_round = 3, range = c(-20, 15), type = "Gamma", level = round(level1, 3) * 100)
 ```
 
-<img src="output1.png" style="width:98.0%" />
+<img src="vignettes/output1.png" style="width:98.0%" />
 
 ``` r
 ## Phylogenetic diversity
@@ -1026,7 +1026,7 @@ output2 <- iNEXTbeta3Dmeta(data = Beetle_abundance_data, diversity = "PD",
 ggiNEXTmeta(output2, q = 0, num_round = 3, range = c(-20, 15), type = "Gamma", level = round(level1, 3) * 100)
 ```
 
-<img src="output2.png" style="width:98.0%" />
+<img src="vignettes/output2.png" style="width:98.0%" />
 
 ``` r
 ## Functional diversity
@@ -1043,4 +1043,4 @@ output3 <- iNEXTbeta3Dmeta(data = Beetle_abundance_data, diversity = "FD",
 ggiNEXTmeta(output3, q = 0, num_round = 3, range = c(-20, 15), type = "Gamma", level = round(level1, 3) * 100)
 ```
 
-<img src="output3.png" style="width:98.0%" />
+<img src="vignettes/output3.png" style="width:98.0%" />
