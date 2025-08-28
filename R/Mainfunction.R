@@ -201,7 +201,7 @@ iNEXTbeta3Dmeta <- function(data, diversity = "TD", order.q = 0, datatype = "abu
         group_split() |>
         lapply(function(x){
           x |> select(-c(1, 2)) |> unlist() |>
-            (\(v) iNEXT.3D:::Coverage(x = v, "abundance", 2 * sum(v))()
+            (\(v) iNEXT.3D:::Coverage(x = v, "abundance", 2 * sum(v)))()
         }) |>
         unlist() |> min()
     } else {
