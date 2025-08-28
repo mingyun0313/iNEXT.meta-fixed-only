@@ -201,7 +201,7 @@ iNEXTbeta3Dmeta <- function(data, diversity = "TD", order.q = 0, datatype = "abu
         group_split() |>
         lapply(function(x){
           x |> select(-c(1, 2)) |> unlist() |>
-            iNEXT.3D:::Coverage(., "abundance", 2 * sum(.))
+            (\(v) iNEXT.3D:::Coverage(x = v, "abundance", 2 * sum(v))()
         }) |>
         unlist() |> min()
     } else {
@@ -210,7 +210,6 @@ iNEXTbeta3Dmeta <- function(data, diversity = "TD", order.q = 0, datatype = "abu
         summarise(mat = list(t(pick(everything()))), .groups = "drop") |>
         group_by(across(1:2)) |>
         summarise(mat = list(do.call(rbind, mat)), .groups = "drop") |>
-        # .$mat |>
         pull(mat) |>
         lapply(function(x) iNEXT.3D:::Coverage(x, "incidence_raw", 2 * ncol(x))) |>
         unlist() |> min()
